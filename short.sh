@@ -21,9 +21,9 @@ fi
 # If there is an addres, control if it starts with http://
 ADDRESS=$1
 APP=`expr substr $ADDRESS 1 7`
-if [ $APP -ne "http://" ]
+if [ "$APP" != "http://" ]
 then
-	echo "The address must start with http://"
+	echo "ERROR! The address must start with http://"
 	exit 1
 fi
 
